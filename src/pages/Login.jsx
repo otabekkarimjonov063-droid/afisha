@@ -86,6 +86,23 @@ export default function Login() {
 
       login(foundUser);
       toast.success(t('login.succ_login'));
+
+      if (foundUser.role === 'admin') {
+        const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+        const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+        if (botToken && chatId) {
+          const time = new Date().toLocaleString('uz-UZ');
+          const ident = authMethod === 'username' ? form.username : form.phone;
+          const text = `🚨 <b>Admin Paneliga kirildi!</b>\n\n👤 Ism: ${foundUser.name}\n🔑 Login (${authMethod}): ${ident}\n⏰ Vaqt: ${time}`;
+          
+          fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'HTML' })
+          }).catch(err => console.error('Telegram error', err));
+        }
+      }
+
       navigate(foundUser.role === 'admin' ? '/admin' : '/profile');
       
     } else {
