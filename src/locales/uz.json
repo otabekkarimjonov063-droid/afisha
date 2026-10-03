@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Asosiy",
+    "catalog": "Afishalar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "faq": "FAQ",
+    "favorites": "Sevimlilar",
+    "cart": "Savatcha",
+    "profile": "Profil",
+    "admin": "Admin Panel",
+    "login": "Kirish",
+    "logout": "Chiqish"
+  },
+  "hero": {
+    "title": "Tadbir San'atini His Eting",
+    "subtitle": "Konsertlar, teatr va sport turlari uchun premium, cheklangan miqdordagi afishalarni kashf eting.",
+    "cta": "Kolleksiyani Ko'rish"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "addToCart": "Savatchaga qo'shish",
+    "buyNow": "Hozir sotib olish",
+    "search": "Afishalarni qidirish...",
+    "noResults": "Hech narsa topilmadi."
+  },
+  "home": {
+    "featured": {
+      "title": "Tavsiya Etilgan Afishalar",
+      "subtitle": "Shu oyning eng ko'p talab qilinadigan tadbir afishalari to'plami.",
+      "viewAll": "Barchasini ko'rish",
+      "viewAllMobile": "Barcha afishalarni ko'rish"
+    },
+    "upcoming": {
+      "title": "Bo'lajak Tadbirlar"
+    },
+    "stats": {
+      "sold": "Sotilgan Afishalar",
+      "customers": "Mamnun Mijozlar",
+      "rating": "O'rtacha Baho",
+      "events": "Qamrab Olingan Tadbirlar"
+    },
+    "newsletter": {
+      "title": "Kolleksiyachilar Klubiga Qo'shiling",
+      "subtitle": "Cheklangan nashrlar, chegirmalar va maxsus tadbirlar haqida birinchilardan bo'lib bilib oling.",
+      "placeholder": "Elektron pochta manzilingiz",
+      "button": "Obuna bo'lish"
+    },
+    "socialProof": "10,000+ kolleksiyachilar"
+  },
+  "about": {
+    "title": "Bizning Tariximiz",
+    "subtitle": "Biz dizayn, tadbirlar va ularning kesishishiga ishtiyoqmandmiz. Afisha jonli tadbirlarning sehrini chiroyli ishlangan plakatlar orqali saqlab qolish istagidan tug'ilgan.",
+    "section2": {
+      "title": "Xotiralarni Yaratish",
+      "p1": "Biz sotadigan har bir plakat diqqat bilan tanlanadi. Siz o'zingiz yoqtirgan tadbirlarning mohiyatini aks ettiruvchi eksklyuziv, yuqori sifatli nashrlarni taqdim etish uchun tashkilotchilar bilan bevosita ishlaymiz.",
+      "p2": "Mahalliy konsertlardan tortib xalqaro konferensiyalargacha, biz har bir buyuk voqea buyuk san'atga loyiq deb bilamiz."
+    }
+  },
+  "faq": {
+    "title1": "Ko'p Beriladigan",
+    "title2": "Savollar",
+    "items": [
+      {
+        "q": "Yetkazib berish qancha vaqt oladi?",
+        "a": "Standart yetkazib berish O'zbekiston bo'ylab odatda 3-5 ish kunini oladi. Xalqaro yetkazib berish 14 ish kunigacha cho'zilishi mumkin."
+      },
+      {
+        "q": "Qanday sifatli qog'ozdan foydalanasiz?",
+        "a": "Biz arxiv siyohlari bilan 250gsm premium mat qog'ozda chop etamiz, bu sizning afishangizning yillar davomida so'nmasligini ta'minlaydi."
+      },
+      {
+        "q": "Agar menga yoqmasa, afishani qaytarib bera olamanmi?",
+        "a": "Ha! Asl holatidagi narsalar uchun bizda 14 kunlik qaytarish siyosati mavjud. Iltimos, qaytarish yetkazib berish xarajatlari mijoz tomonidan qoplanishiga e'tibor qarating."
+      },
+      {
+        "q": "Maxsus o'lchamlarni taklif qilasizmi?",
+        "a": "Hozirda biz ko'pgina afishalarimiz uchun standart A4, A3 va A2 o'lchamlarini taklif qilamiz. Ommaviy yoki maxsus so'rovlar uchun mijozlarni qo'llab-quvvatlash jamoamiz bilan bog'laning."
+      }
+    ]
+  },
+  "cart": {
+    "empty_title": "Savatchangiz bo'sh",
+    "empty_desc": "Aftidan, siz savatchangizga hali hech qanday afisha qo'shmagansiz.",
+    "explore": "Kolleksiyani ko'rish",
+    "your": "Sizning",
+    "title": "Savatchangiz",
+    "product": "Mahsulot",
+    "size": "O'lcham",
+    "quantity": "Soni",
+    "total": "Jami",
+    "summary_title": "Buyurtma haqida",
+    "subtotal": "Oraliq summa",
+    "discount": "Chegirma",
+    "promo_code": "Promo kod",
+    "apply": "Qo'llash",
+    "full_name": "To'liq ismingiz",
+    "phone": "Telefon raqamingiz",
+    "address": "Yetkazib berish manzili",
+    "comment": "Izoh (ixtiyoriy)",
+    "payment": "To'lov turi",
+    "cash": "Naqd",
+    "on_delivery": "yetkazib berganda",
+    "card": "Karta orqali",
+    "payme_click": "Payme / Click",
+    "place_order": "Buyurtma berish",
+    "promo_invalid": "Promo kod noto'g'ri.",
+    "promo_limit": "Promo koddan foydalanish limiti tugagan.",
+    "promo_success": "Promo kod qo'llanildi!",
+    "fill_required": "Iltimos, barcha majburiy maydonlarni to'ldiring",
+    "order_success": "Buyurtma muvaffaqiyatli rasmiylashtirildi!"
+  },
+  "login": {
+    "welcome": "Xush kelibsiz",
+    "create_account": "Hisob yaratish",
+    "welcome_desc": "Hisobingizga kirish uchun ma'lumotlarni kiriting.",
+    "create_desc": "Afishalar sotib olish va yig'ish uchun bizga qo'shiling.",
+    "login_tab": "Kirish",
+    "register_tab": "Ro'yxatdan o'tish",
+    "use_username": "Login orqali",
+    "use_phone": "Telefon orqali",
+    "full_name": "To'liq ismingiz",
+    "username": "Login (Username)",
+    "phone": "Telefon raqam",
+    "password": "Parol",
+    "create_btn": "Hisob yaratish",
+    "login_btn": "Kirish",
+    "demo_admin": "Demo Admin: username admin / password admin123",
+    "err_password": "Parol kamida 6 belgidan iborat bo'lishi kerak",
+    "err_invalid": "Noto'g'ri login yoki parol",
+    "err_taken_user": "Bu login band",
+    "err_taken_phone": "Bu telefon raqam ro'yxatdan o'tgan",
+    "succ_login": "Muvaffaqiyatli kirdingiz!",
+    "succ_reg": "Muvaffaqiyatli ro'yxatdan o'tdingiz!"
+  },
+  "profile": {
+    "title": "Profil",
+    "my": "Mening",
+    "logout": "Chiqish",
+    "history": "Buyurtmalar tarixi",
+    "order": "Buyurtma",
+    "items": "Mahsulotlar",
+    "size": "O'lcham",
+    "no_orders": "Siz hali hech qanday buyurtma bermagansiz."
+  },
+  "contact": {
+    "title": "Aloqa",
+    "get_in": "Biz bilan",
+    "touch": "Bog'lanish",
+    "desc": "Afisha, yetkazib berish yoki maxsus o'lcham haqida savolingiz bormi? Biz yordam berishga tayyormiz.",
+    "info": "Aloqa ma'lumotlari",
+    "email_us": "Elektron pochta",
+    "call_us": "Telefon qiling",
+    "visit_us": "Tashrif buyuring",
+    "send_msg": "Xabar yuborish",
+    "name": "Ismingiz",
+    "email": "Email manzilingiz",
+    "message": "Xabar matni",
+    "send_btn": "Xabarni yuborish",
+    "succ_msg": "Xabar muvaffaqiyatli yuborildi!",
+    "address": "Amir Temur shoh ko'chasi 108,<br/>Toshkent, O'zbekiston",
+    "hours": "Dush-Shan: 10:00 - 20:00<br/>Yak: Yopiq"
+  }
+}

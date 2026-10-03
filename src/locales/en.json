@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "about": "About",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "profile": "Profile",
+    "admin": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Unleash the Art of Events",
+    "subtitle": "Discover premium, limited-edition posters for concerts, theatre, and sports.",
+    "cta": "Shop Collection"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "search": "Search posters...",
+    "noResults": "No results found."
+  },
+  "home": {
+    "featured": {
+      "title": "Featured Posters",
+      "subtitle": "Curated collection of the most sought-after event posters this month.",
+      "viewAll": "View all",
+      "viewAllMobile": "View all posters"
+    },
+    "upcoming": {
+      "title": "Upcoming Events"
+    },
+    "stats": {
+      "sold": "Posters Sold",
+      "customers": "Happy Customers",
+      "rating": "Average Rating",
+      "events": "Events Covered"
+    },
+    "newsletter": {
+      "title": "Join the Collector's Club",
+      "subtitle": "Get exclusive access to limited edition drops, early bird discounts, and special event announcements.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "socialProof": "Join 10,000+ collectors"
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "We are passionate about design, events, and the intersection of both. Afisha was born out of a desire to preserve the fleeting magic of live events through beautifully crafted posters.",
+    "section2": {
+      "title": "Crafting Memories",
+      "p1": "Every poster we sell is carefully curated. We work directly with organizers and designers to bring you exclusive, high-quality prints that capture the essence of the events you love.",
+      "p2": "From local indie gigs to international conferences, we believe every great event deserves great art."
+    }
+  },
+  "faq": {
+    "title1": "Frequently Asked",
+    "title2": "Questions",
+    "items": [
+      {
+        "q": "How long does shipping take?",
+        "a": "Standard shipping usually takes 3-5 business days within Uzbekistan. International shipping can take up to 14 business days."
+      },
+      {
+        "q": "What paper quality do you use?",
+        "a": "We print on 250gsm premium matte paper with archival inks, ensuring your poster lasts for years without fading."
+      },
+      {
+        "q": "Can I return a poster if I don't like it?",
+        "a": "Yes! We have a 14-day return policy for items in their original condition. Please note that return shipping costs are covered by the customer."
+      },
+      {
+        "q": "Do you offer custom sizes?",
+        "a": "Currently, we offer standard A4, A3, and A2 sizes for most of our posters. For bulk or special requests, please contact our support team."
+      }
+    ]
+  },
+  "cart": {
+    "empty_title": "Your cart is empty",
+    "empty_desc": "Looks like you haven't added any posters to your cart yet.",
+    "explore": "Explore Collection",
+    "your": "Your",
+    "title": "Cart",
+    "product": "Product",
+    "size": "Size",
+    "quantity": "Quantity",
+    "total": "Total",
+    "summary_title": "Order Summary",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "promo_code": "Promo Code",
+    "apply": "Apply",
+    "full_name": "Full Name",
+    "phone": "Phone Number",
+    "address": "Delivery Address",
+    "comment": "Comment (optional)",
+    "payment": "Payment Method",
+    "cash": "Cash",
+    "on_delivery": "on delivery",
+    "card": "Card",
+    "payme_click": "Payme / Click",
+    "place_order": "Place Order",
+    "promo_invalid": "Invalid promo code.",
+    "promo_limit": "Promo code usage limit reached.",
+    "promo_success": "Promo code applied!",
+    "fill_required": "Please fill all required fields",
+    "order_success": "Order placed successfully!"
+  },
+  "login": {
+    "welcome": "Welcome Back",
+    "create_account": "Create an Account",
+    "welcome_desc": "Enter your details to access your account.",
+    "create_desc": "Join us to buy and collect event posters.",
+    "login_tab": "Log In",
+    "register_tab": "Register",
+    "use_username": "Use Username",
+    "use_phone": "Use Phone",
+    "full_name": "Full Name",
+    "username": "Username",
+    "phone": "Phone Number",
+    "password": "Password",
+    "create_btn": "Create Account",
+    "login_btn": "Log In",
+    "demo_admin": "Demo Admin: username admin / password admin123",
+    "err_password": "Password must be at least 6 characters",
+    "err_invalid": "Invalid credentials",
+    "err_taken_user": "Username already taken",
+    "err_taken_phone": "Phone number already registered",
+    "succ_login": "Logged in successfully!",
+    "succ_reg": "Registered successfully!"
+  },
+  "profile": {
+    "title": "Profile",
+    "my": "My",
+    "logout": "Logout",
+    "history": "Order History",
+    "order": "Order",
+    "items": "Items",
+    "size": "Size",
+    "no_orders": "You haven't placed any orders yet."
+  },
+  "contact": {
+    "title": "Contact",
+    "get_in": "Get in",
+    "touch": "Touch",
+    "desc": "Have a question about a poster, shipping, or need a custom size? We're here to help.",
+    "info": "Contact Information",
+    "email_us": "Email Us",
+    "call_us": "Call Us",
+    "visit_us": "Visit Us",
+    "send_msg": "Send a Message",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Message",
+    "send_btn": "Send Message",
+    "succ_msg": "Message sent successfully!",
+    "address": "Amir Temur avenue 108,<br/>Tashkent, Uzbekistan",
+    "hours": "Mon-Sat: 10:00 - 20:00<br/>Sun: Closed"
+  }
+}
