@@ -1,6 +1,7 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
+import { useStore } from '@/store';
 
 const Home = lazy(() => import('@/pages/Home'));
 const Catalog = lazy(() => import('@/pages/Catalog'));
@@ -28,13 +29,23 @@ const router = createBrowserRouter([
       { path: 'cart', element: <Cart /> },
       { path: 'login', element: <Login /> },
       { path: 'profile', element: <Profile /> },
-      { path: 'admin/*', element: <Admin /> },
       { path: '*', element: <NotFound /> },
     ]
-  }
+  },
+  { path: '/admin/*', element: <Admin /> }
 ]);
 
 function App() {
+  const { theme } = useStore();
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-bg-light dark:bg-bg-dark">

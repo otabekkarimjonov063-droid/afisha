@@ -90,8 +90,51 @@ function DashboardOverview() {
 }
 
 function ProductsManager() {
-  const { products, deleteProduct } = useStore();
+  const { products, addProduct, updateProduct, deleteProduct } = useStore();
   const [searchTerm, setSearchTerm] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingId, setEditingId] = useState(null);
+  
+  const [form, setForm] = useState({
+    titleUz: '', titleRu: '', titleEn: '',
+    price: '', oldPrice: '', category: 'concerts', image: '', stock: ''
+  });
+
+  const openAdd = () => {
+    setEditingId(null);
+    setForm({ titleUz: '', titleRu: '', titleEn: '', price: '', oldPrice: '', category: 'concerts', image: '', stock: '' });
+    setIsModalOpen(true);
+  };
+
+  const openEdit = (p) => {
+    setEditingId(p.id);
+    setForm({
+      titleUz: p.title.uz, titleRu: p.title.ru, titleEn: p.title.en,
+      price: p.price, oldPrice: p.oldPrice || '', category: p.category, image: p.image, stock: p.stock
+    });
+    setIsModalOpen(true);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const productData = {
+      title: { uz: form.titleUz, ru: form.titleRu, en: form.titleEn },
+      price: Number(form.price),
+      oldPrice: form.oldPrice ? Number(form.oldPrice) : null,
+      category: form.category,
+      image: form.image,
+      stock: Number(form.stock)
+    };
+
+    if (editingId) {
+      updateProduct(editingId, productData);
+      toast.success('Product updated!');
+    } else {
+      addProduct({ id: 'prod-' + Date.now(), ...productData });
+      toast.success('Product added!');
+    }
+    setIsModalOpen(false);
+  };
 
   const filtered = products.filter(p => p.title.en.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -104,10 +147,69 @@ function ProductsManager() {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="max-w-xs"
         />
-        <Button className="flex items-center gap-2">
+        <Button onClick={openAdd} className="flex items-center gap-2">
           <Plus className="w-4 h-4" /> Add Product
         </Button>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+          <Card className="w-full max-w-lg max-h-[90vh] overflow-y-auto p-6 bg-white dark:bg-slate-800">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-xl font-bold">{editingId ? 'Edit Product' : 'Add Product'}</h3>
+              <button onClick={() => setIsModalOpen(false)}><X className="w-5 h-5 text-slate-400" /></button>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Title (UZ)</label>
+                <Input required value={form.titleUz} onChange={e => setForm({...form, titleUz: e.target.value})} />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Title (RU)</label>
+                <Input required value={form.titleRu} onChange={e => setForm({...form, titleRu: e.target.value})} />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Title (EN)</label>
+                <Input required value={form.titleEn} onChange={e => setForm({...form, titleEn: e.target.value})} />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Price (UZS)</label>
+                  <Input type="number" required value={form.price} onChange={e => setForm({...form, price: e.target.value})} />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Old Price</label>
+                  <Input type="number" value={form.oldPrice} onChange={e => setForm({...form, oldPrice: e.target.value})} />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Category</label>
+                <select 
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  value={form.category} onChange={e => setForm({...form, category: e.target.value})}
+                >
+                  <option value="concerts">Concerts</option>
+                  <option value="theatre">Theatre</option>
+                  <option value="sports">Sports</option>
+                  <option value="exhibitions">Exhibitions</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Image URL</label>
+                <Input required value={form.image} onChange={e => setForm({...form, image: e.target.value})} />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Stock</label>
+                <Input type="number" required value={form.stock} onChange={e => setForm({...form, stock: e.target.value})} />
+              </div>
+              <div className="flex justify-end gap-3 pt-4">
+                <Button type="button" variant="outline" onClick={() => setIsModalOpen(false)}>Cancel</Button>
+                <Button type="submit">Save</Button>
+              </div>
+            </form>
+          </Card>
+        </div>
+      )}
 
       <Card className="overflow-x-auto">
         <table className="w-full text-left text-sm">
@@ -131,7 +233,7 @@ function ProductsManager() {
                 <td className="p-4">{p.price.toLocaleString()} UZS</td>
                 <td className="p-4">{p.stock}</td>
                 <td className="p-4 text-right">
-                  <button className="p-2 text-slate-400 hover:text-violet-600">
+                  <button onClick={() => openEdit(p)} className="p-2 text-slate-400 hover:text-violet-600">
                     <Edit className="w-4 h-4" />
                   </button>
                   <button onClick={() => deleteProduct(p.id)} className="p-2 text-slate-400 hover:text-coral-500">
