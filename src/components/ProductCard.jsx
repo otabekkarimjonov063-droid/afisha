@@ -44,16 +44,16 @@ export default function ProductCard({ product, index = 0 }) {
     >
       {/* Animated Gradient Border for Discounted Items */}
       {product.oldPrice && (
-        <div className="absolute -inset-[150%] z-0 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_340deg,theme(colors.coral.500)_360deg)] opacity-100" />
+        <div className="absolute -inset-[150%] z-0 animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_200deg,theme(colors.coral.500)_360deg)] opacity-100" />
       )}
       {product.oldPrice && (
-        <div className="absolute -inset-[150%] z-0 animate-[spin_4s_linear_infinite_reverse] bg-[conic-gradient(from_0deg,transparent_0_340deg,theme(colors.violet.500)_360deg)] opacity-100" />
+        <div className="absolute -inset-[150%] z-0 animate-[spin_3s_linear_infinite_reverse] bg-[conic-gradient(from_0deg,transparent_0_200deg,theme(colors.violet.500)_360deg)] opacity-100" />
       )}
 
       {/* Inner Card Content */}
       <div className={cn(
         "relative z-10 flex flex-col h-full bg-white dark:bg-slate-800",
-        product.oldPrice ? "m-[2px] rounded-[22px] overflow-hidden" : ""
+        product.oldPrice ? "m-[4px] rounded-[20px] overflow-hidden" : ""
       )}>
         <div className="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-900">
           <motion.img

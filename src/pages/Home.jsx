@@ -44,7 +44,7 @@ export default function Home() {
       }
     });
     return () => ctx.revert();
-  }, [featured]);
+  }, []);
 
   return (
     <>
@@ -107,7 +107,12 @@ export default function Home() {
             >
               <div className="flex -space-x-3">
                 {[1,2,3,4].map(i => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 dark:bg-slate-800" />
+                  <img 
+                    key={i} 
+                    src={`https://i.pravatar.cc/100?img=${i + 10}`} 
+                    alt="User Avatar"
+                    className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover" 
+                  />
                 ))}
               </div>
               <p>{t('home.socialProof')}</p>
