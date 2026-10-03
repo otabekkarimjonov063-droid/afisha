@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, User, Phone, Lock } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
@@ -12,9 +12,10 @@ import { hashPassword } from '@/utils/crypto';
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t } = useTranslation();
   const { user, users, login, registerUser } = useStore();
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(location.state?.register ? false : true);
   const [authMethod, setAuthMethod] = useState('username'); // 'username' or 'phone'
   
   const [showPassword, setShowPassword] = useState(false);

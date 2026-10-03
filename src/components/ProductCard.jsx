@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, ShoppingBag, ZoomIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useStore } from '@/store';
 import { cn } from '@/utils/cn';
 
 export default function ProductCard({ product, index = 0 }) {
+  const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  const { toggleFavorite, favorites, addToCart } = useStore();
+  const { user, toggleFavorite, favorites, addToCart } = useStore();
   const [isHovered, setIsHovered] = useState(false);
   
   const isFavorite = favorites.includes(product.id);
@@ -16,6 +18,12 @@ export default function ProductCard({ product, index = 0 }) {
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    
+    if (!user) {
+      navigate('/login', { state: { register: true } });
+      return;
+    }
+    
     addToCart({ ...product, size: 'A3', qty: 1 });
   };
 
